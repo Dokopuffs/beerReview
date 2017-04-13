@@ -30,4 +30,5 @@ client.connect( function(err) {
     execQuery("CREATE TABLE brewed(beer_id INTEGER REFERENCES beer (id), brewery_id INTEGER REFERENCES brewery (id), first_brewed DATE, PRIMARY KEY (beer_id, brewery_id))");
     execQuery("CREATE TABLE post(id SERIAL PRIMARY KEY, description TEXT, rating INTEGER, user_id INTEGER REFERENCES users (id), beer_id INTEGER REFERENCES beer (id))");
     console.log("Finished creating tables");
+    client.end();
 });
