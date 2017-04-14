@@ -9,4 +9,4 @@
 * Likes (Brewery <> User)
 * Friend (User <> User)
 
-This will entitle the tables within the database. Intend to scrape internet for all know breweries and beer. 
+This describes the tables in the database. Intend to scrape internet for all known breweries and beer. 
