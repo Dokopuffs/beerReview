@@ -44,7 +44,7 @@ router.get('/beers', function(req, res, next) {
 
 router.post('/beers', function(req, res, next) {
     const data = {name: req.body.name, type: req.body.type};
-    postResult(queryMap["beer"]["POST"], [data.name, data.type]);
+    postResult(queryMap["beer"]["POST"], [data.name, data.type], res);
 });
 
 router.get('/brewery', function(req, res, next) {
@@ -53,7 +53,7 @@ router.get('/brewery', function(req, res, next) {
 
 router.post('/brewery', function(req, res, next) {
     const data = {name: req.body.name, established: req.body.established};
-    postResult(queryMap["brewery"]["POST"], [data.name, data.established]);
+    postResult(queryMap["brewery"]["POST"], [data.name, data.established], res);
 });
 
 module.exports = router;
